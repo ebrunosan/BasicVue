@@ -4,22 +4,20 @@
   </head>
   <body>
     
-    <div id="container">
-      <input type="text" id="container" placeholder="enter text" v-model="value">
-      <p>{{ value }}</p>
+    <div id="root">
+      <li v-for="name in names" v-text="name"></li>
     </div>
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/0.11.10/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script>
-      
-      new Vue({
-        el: '#container',
+
+      var app = new Vue({
+        el: '#root',
         data: {
-          value: '',
+          names: ['Joe', 'Mary', 'Jane'],
         },
       });
-      
+
     </script>
-    
   </body>
 </html>
